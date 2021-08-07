@@ -1,14 +1,12 @@
-# Autograding Example: Python
-This example project is written in Python, and tested with pytest.
+# Lazy Iterators
 
-### The assignment
-The tests are failing right now because the method isn't outputting the correct string. Fixing this up will make the tests green.
+To illustrate the application of lazy iterators, the dataset `nyc_parking_tickets_extract-1.csv` is considered. Module collections offer Counter method that can be used to count the items of interest in an instance over the range of data.
 
-### Setup command
-`sudo -H pip3 install pytest`
+`yield from` is a generator used to generate the data, and namedtuple `ParkingTickets` is used to denote observations from the rows of data.
 
-### Run command
-`pytest`
+`get_data()` yields data from a single row from the dataset each time it is called for, and `gen_tkts` makes a namedtuple() out of the generated data from `get_data()`.
 
-### Notes
-- pip's install path is not included in the PATH var by default, so without installing via `sudo -H`, pytest would be unaccessible.
+`carmake_data()` gives the output of Counter() on sequences of data generated from generator.
+
+
+
